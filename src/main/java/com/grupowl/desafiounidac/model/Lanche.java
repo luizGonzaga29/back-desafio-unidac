@@ -82,6 +82,12 @@ public class Lanche implements Serializable {
 		Lanche other = (Lanche) obj;
 		return Objects.equals(id, other.id);
 	}
+
+	@Override
+	public String toString() {
+		return "Lanche [nome=" + nome + "]";
+	}
+	
 	
 	
 }

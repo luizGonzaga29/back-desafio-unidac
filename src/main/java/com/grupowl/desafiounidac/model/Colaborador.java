@@ -70,6 +70,7 @@ public class Colaborador implements Serializable {
 	public List<Lanche> getLanches() {
 		return lanches;
 	}
+	
 
 	@Override
 	public int hashCode() {

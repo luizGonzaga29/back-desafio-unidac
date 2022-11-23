@@ -20,6 +20,7 @@ import com.grupowl.desafiounidac.model.Colaborador;
 import com.grupowl.desafiounidac.service.ColaboradorService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping(value = "/colaborador")
 public class ColaboradorController {
 
@@ -31,9 +32,10 @@ public class ColaboradorController {
 		List<Colaborador> listaColaborador = colaboradorService.buscarTodosColaboradores();
 		return ResponseEntity.ok().body(listaColaborador);
 	}
-	@CrossOrigin
+	
 	@PostMapping(value="/post")
 	public ResponseEntity<Colaborador> inserirColaborador(@RequestBody Colaborador colaborador){
+		System.out.println(colaborador);
 		colaborador = colaboradorService.inserirColaborador(colaborador);
 		
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")

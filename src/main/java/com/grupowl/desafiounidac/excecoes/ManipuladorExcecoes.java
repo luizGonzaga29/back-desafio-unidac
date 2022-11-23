@@ -59,4 +59,12 @@ public class ManipuladorExcecoes {
 		ErroPadrao err = new ErroPadrao(Instant.now(), status.value(), error, e.getMessage(), request.getRequestURI());
 		return ResponseEntity.status(status).body(err);
 	}
+	
+	@ExceptionHandler(LancheVazioExcecoes.class)
+	public ResponseEntity<ErroPadrao> LancheVazio(LancheVazioExcecoes e, HttpServletRequest request) {
+		String error = "Ainda não há lanches!";
+		HttpStatus status = HttpStatus.NOT_FOUND;
+		ErroPadrao err = new ErroPadrao(Instant.now(), status.value(), error, e.getMessage(), request.getRequestURI());
+		return ResponseEntity.status(status).body(err);
+	}
 }
