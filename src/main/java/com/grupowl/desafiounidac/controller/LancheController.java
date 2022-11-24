@@ -14,7 +14,7 @@ import com.grupowl.desafiounidac.model.Lanche;
 import com.grupowl.desafiounidac.service.LancheService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://front-wl.vercel.app/")
 @RequestMapping(value = "/lanche")
 public class LancheController {
 
