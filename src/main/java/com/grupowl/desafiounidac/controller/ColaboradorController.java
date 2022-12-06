@@ -20,7 +20,7 @@ import com.grupowl.desafiounidac.model.Colaborador;
 import com.grupowl.desafiounidac.service.ColaboradorService;
 
 @RestController
-@CrossOrigin(origins = "https://front-wl.vercel.app/")
+@CrossOrigin(origins = "https://marvelous-faloodeh-5f6c7e.netlify.app/")
 @RequestMapping(value = "/colaborador")
 public class ColaboradorController {
 
