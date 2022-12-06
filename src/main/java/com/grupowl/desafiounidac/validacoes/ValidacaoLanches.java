@@ -61,7 +61,7 @@ public class ValidacaoLanches {
 		
 		int contador = 0;
 		try {
-			Lanche lanche = lancheRepository.buscarLanchePorNome(nome);
+			Lanche lanche = lancheRepository.buscarLanchePorNome(nome.toLowerCase());
 			if (lanche != null)
 				contador = 2;
 		}catch (Exception e) {

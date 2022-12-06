@@ -21,7 +21,7 @@ public class LancheService {
 		List<Lanche> listaLanche = new ArrayList<>();
 		for(Lanche lanche : colaborador.getLanches()) {
 			Lanche lan = new Lanche();
-			lan.setNome(lanche.getNome());
+			lan.setNome(lanche.getNome().toLowerCase());
 			lan.setColaborador(colaborador);
 			listaLanche.add(lan);
 		}
